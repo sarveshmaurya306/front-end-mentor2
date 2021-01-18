@@ -1,0 +1,116 @@
+@import url('https://fonts.google.com/specimen/Spartan');
+*{
+    font-family: Spartan;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.paragraph{
+    color:hsl(0, 0%, 63%);
+}
+
+// - Dark Gray: hsl(0, 0%, 63%)
+// - Black: hsl(0, 0%, 0%)
+// - White: hsl(0, 0%, 100%)
+// - Very Dark Gray: hsl(0, 0%, 27%)
+.main_content{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    padding-top: 4rem;
+}
+.pointer{
+    cursor: pointer;
+}
+.hover_effect{
+    $thetransition: all .3s linear;
+    text-decoration: none;
+    position: relative;
+
+    &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: $thetransition;
+    transition: $thetransition;
+    }
+    &:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(2);
+    transform: scaleX(2);
+    }
+}
+.hover_effect_white{
+    $thetransition: all .3s linear;
+    text-decoration: none;
+    position: relative;
+
+    &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: $thetransition;
+    transition: $thetransition;
+    }
+    &:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(2);
+    transform: scaleX(2);
+    }
+}
+
+.arrow{
+    width:100%;
+    height: 100%;
+    display:'flex';
+    justify-content:'center';
+}
+
+.arrow:hover{
+    background-color: rgba(255, 255, 255, 0.445);
+    transition: 0.3s ease;
+}
+.button{
+    letter-spacing: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    word-spacing: 0.3rem;
+    padding-right: 1.5rem;
+    cursor: pointer;
+}
+.about{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.5rem;
+    word-spacing: 0.2rem;
+}
+.main_content_header{
+    font-weight: 600;
+    font-size: '45px';
+}
+@media screen and (max-width:997px){
+    .main_content{
+        padding-left: 3rem!important;
+        padding-right: 3rem!important;
+        padding-top: 0;
+        padding-bottom: 3rem!important;
+    }
+}

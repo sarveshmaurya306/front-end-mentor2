@@ -1,0 +1,132 @@
+@import url("https://fonts.google.com/specimen/Spartan");
+* {
+  font-family: Spartan;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.paragraph {
+  color: #a1a1a1;
+}
+
+.main_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  padding-top: 4rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.hover_effect {
+  text-decoration: none;
+  position: relative;
+}
+
+.hover_effect:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.hover_effect:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(2);
+  transform: scaleX(2);
+}
+
+.hover_effect_white {
+  text-decoration: none;
+  position: relative;
+}
+
+.hover_effect_white:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.hover_effect_white:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(2);
+  transform: scaleX(2);
+}
+
+.arrow {
+  width: 100%;
+  height: 100%;
+  display: 'flex';
+  -webkit-box-pack: 'center';
+      -ms-flex-pack: 'center';
+          justify-content: 'center';
+}
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.445);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.button {
+  letter-spacing: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  word-spacing: 0.3rem;
+  padding-right: 1.5rem;
+  cursor: pointer;
+}
+
+.about {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.5rem;
+  word-spacing: 0.2rem;
+}
+
+.main_content_header {
+  font-weight: 600;
+  font-size: '45px';
+}
+
+@media screen and (max-width: 997px) {
+  .main_content {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+    padding-top: 0;
+    padding-bottom: 3rem !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
